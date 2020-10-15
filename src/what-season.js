@@ -1,11 +1,13 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function getSeason(date) {
-  if (date.length === 0) {
-    return 'Unable to determine the time of year!';
+
+  if (date === undefined) {
+    return "Unable to determine the time of year!";
   }
-  if (typeof date !== 'object' && date === null) {
-    throw Error;
+
+  if (typeof date !== "object") {
+    throw new Error();
   }
 
   const month = date.getUTCMonth();

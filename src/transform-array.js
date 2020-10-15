@@ -22,5 +22,5 @@ module.exports = function transform(arr) {
       result.push(arr[i]);
     }
   };
-  return result;
+  return result.filter(Boolean);
 };
